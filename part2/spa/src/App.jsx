@@ -8,6 +8,15 @@ const App = (props) => {
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
+  setTimeout(() => {
+    console.log('loop..')
+    let i = 0
+    while (i < 99999999999) {
+      i++
+    }
+    console.log('end')
+  }, 5000)
+  
   const addNote = (event) => {
     event.preventDefault()
     const noteObject = {
