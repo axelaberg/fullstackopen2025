@@ -47,14 +47,13 @@ const App = () => {
   ]
 
 console.log(courses)
-const courseID = courses.map(courses => { 
-  return <Course key={courses.id} course={courses}/>
-})
 
 return (
   <div>
     <h1>Web development curriculum</h1>
-    {courseID}
+    {courses.map(course => ( 
+      <Course key={courses.id} course={course}/>
+  ))}
   </div>
   )
 }
